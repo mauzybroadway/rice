@@ -1,6 +1,6 @@
-/*  
-    TODO:
-    toolbar height dependant on icon height
+/*
+TODO:
+toolbar height dependant on icon height
 */
 /* AGENT_SHEET */
 @namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
@@ -8,8 +8,8 @@
 /* searchbar */
 #search-container { max-width: 250px !important; }
 /* urlbar */
-#urlbar-container { 
-    max-width: 250px !important;
+#urlbar-container {
+    max-width: 2500px !important;
     min-width: 250px !important;
     background: inherit !important;
 }
@@ -37,7 +37,7 @@ textbox#urlbar {
     height: 16px !important;
 }
 #identity-box {
-    width: 16px !important; 
+    width: 16px !important;
 }
 /* common rules for icons */
 #TabsToolbar toolbarbutton > image,
@@ -83,18 +83,18 @@ html|input.urlbar-input {
 .urlbar-input-box {
     margin: 0 !important;
 }
-/* top level container for tabs */ 
-#navigator-toolbox { 
-    border-bottom: none !important; 
+/* top level container for tabs */
+#navigator-toolbox {
+    border-bottom: none !important;
 }
 /* menu button
-   note: for some reason, on GNU/Linux this button has an id 
-   appmenu-toolbar-button and on Windows appmenu-button
-   #appmenu-toolbar-button, #appmenu-button */
+note: for some reason, on GNU/Linux this button has an id
+appmenu-toolbar-button and on Windows appmenu-button
+#appmenu-toolbar-button, #appmenu-button */
 /* text on the menu button ("Firefox") */
 #appmenu-toolbar-button > .toolbarbutton-text,
 #appmenu-toolbar-button > .toolbarbutton-icon,
-#appmenu-button > .toolbarbutton-text, 
+#appmenu-button > .toolbarbutton-text,
 #appmenu-button > .toolbarbutton-icon {
     display: none !important;
 }
@@ -111,13 +111,13 @@ html|input.urlbar-input {
     list-style-image: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" height="14" width="14"><path fill="%23fff" d="m5.26 13.8c-1.9-0.4-3.51-1.6-4.28-3.2-0.631-1.25-0.952-2.08-0.867-4.06 0.107-2.45 0.819-4.04 1.9-5.25l0.51-0.569 0.07 1.02c0.0669 0.999 0.0773 1.02 0.453 1.07 0.295 0.0341 0.528-0.089 1-0.528 0.656-0.609 1.57-1.1 2.07-1.1 0.298-0.00299 0.296 0.00673-0.0983 0.652-0.22 0.36-0.5 0.89-0.61 1.18-0.21 0.51-0.21 0.52 0.14 0.66 0.195 0.0746 0.619 0.136 0.944 0.136s0.657 0.0809 0.738 0.18c0.23 0.28-0.26 0.94-0.98 1.33-0.63 0.34-0.64 0.36-0.64 1v0.659l-0.41-0.21c-0.76-0.4-0.94 0.11-0.29 0.77 0.52 0.52 1.02 0.52 2.07-0.01 0.94-0.48 1.24-0.51 1.55-0.16 0.33 0.37 0.28 0.69-0.15 0.88-0.21 0.09-0.6 0.36-0.88 0.61-0.45 0.39-0.86 0.57-1.82 0.77-0.53 0.12 0.88 0.67 1.71 0.67 1.26 0 2.62-0.86 3.22-1.96 0.5-0.95 0.4-2.31-0.3-3.33-0.2-0.29-0.3-0.52-0.3-0.52 0.153 0 0.995 0.742 1.27 1.12l0.331 0.452v-0.623c0-1.11-0.662-2.87-1.49-3.98l-0.33-0.472 0.73 0.402c2.3 1.27 3.8 4.26 3.3 6.87-0.4 2.44-2.2 4.64-4.44 5.44-0.97 0.3-2.92 0.4-4.1 0.1z"/></svg>') !important;
 }
 /* go button (the one that you can press to accept the current url) */
-#go-button { 
-    display: none !important; 
+#go-button {
+    display: none !important;
 }
 /* identity box */
-#identity-box { 
+#identity-box {
     height: inherit !important;
-    min-width: 0 !important;  
+    min-width: 0 !important;
     min-height: 0 !important;
     border: 0 !important;
     border-radius: 0px !important;
@@ -126,12 +126,12 @@ html|input.urlbar-input {
     background: transparent !important;
 }
 /* identity box text label */
-#identity-icon-labels { 
-    display: none !important; 
+#identity-icon-labels {
+    display: none !important;
 }
 /* identity box icon */
-#page-proxy-favicon { 
-    min-width: 0 !important;  
+#page-proxy-favicon {
+    min-width: 0 !important;
     min-height: 0 !important;
     padding: 0 !important;
     margin: 0 0 0 1px !important;
@@ -162,7 +162,7 @@ html|input.urlbar-input {
     -moz-image-region: inherit !important;
 }
 /* icons right of editbox (like bookmark star) */
-#urlbar-icons { 
+#urlbar-icons {
     height: inherit !important;
     padding: 0 1px 0 1px !important;
     margin: 0 !important;
@@ -173,6 +173,7 @@ html|input.urlbar-input {
 .ac-result-type-bookmark,
 .autocomplete-treebody::-moz-tree-image(bookmark, treecolAutoCompleteImage) {
     /* white heart icon */
+    display:none;
     list-style-image: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" height="14" width="14"><path fill="%23fff" d="m3.67 0.845c-2.03 0-3.66 1.63-3.66 3.66s0.0826 2.66 1.77 4.21c1.39 1.27 4.82 4.44 5.21 4.44s3.82-3.16 5.21-4.44c1.69-1.55 1.77-2.18 1.77-4.21s-1.63-3.66-3.66-3.66c-1.52 0-3.02 2.22-3.33 2.22-0.309 0-1.8-2.22-3.33-2.22z"/></svg>') !important;
     padding: 0 !important;
 }
@@ -184,8 +185,8 @@ html|input.urlbar-input {
 #star-button:hover {
     opacity: 1 !important;
 }
-/* a set of icons shown left of identity box for 
-   popup notifications, like addon install etc. */
+/* a set of icons shown left of identity box for
+popup notifications, like addon install etc. */
 #notification-popup-box {
     position: static !important;
     background: #ffffff !important;
@@ -209,15 +210,15 @@ html|input.urlbar-input {
     list-style-image: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" height="14" width="14"><path fill="%23000" d="m5.95 5.81-0.0781 1.83-1.83-0.079-0.0781 1.83-1.83-0.078-0.0781 1.83-1.83-0.079-0.0781 1.83 0.877 0.956 5.73-5.26c1.86-1.71 3.19 0.592 5.58-1.6s1.62-3.99 0.234-5.5c-1.38-1.51-3.59-1.99-5.5-0.234-2.29 2.1-1.05 3.2-1.11 4.54zm3.82-3.51c0.528-0.485 1.35-0.45 1.83 0.079 0.485 0.528 0.45 1.35-0.0781 1.83-0.528 0.485-1.35 0.45-1.83-0.079-0.485-0.528-0.45-1.35 0.0781-1.83z"/></svg>') !important;
 }
 /* arrow icon opening autocomplete history (same as pressing down) */
-.urlbar-history-dropmarker { 
+.urlbar-history-dropmarker {
     display: none !important;
 }
 /* tab close button */
-.tab-close-button { 
-    display: none !important; 
+.tab-close-button {
+    display: none !important;
 }
 /* new tab button */
-toolbarbutton.tabs-newtab-button, 
+toolbarbutton.tabs-newtab-button,
 toolbarbutton#new-tab-button {
     /* white plus icon */
     list-style-image: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" height="14" width="14"><path fill="%23fff" d="m7 11h-1v-1.5-1.5h-1.5-1.5v-1-1h1.5 1.5v-1.5-1.5h1 1v1.5 1.5h1.5 1.5v1 1h-1.5-1.5v1.5 1.5h-1z"/></svg>') !important;
@@ -242,13 +243,13 @@ toolbarbutton#new-tab-button {
     font-weight: bold !important;
 }
 /* tabs container */
-.tabbrowser-tabs { 
+.tabbrowser-tabs {
     background: transparent !important;
     max-height: inherit !important;
 }
 /* primary toolbar (like tabs toolbar, addon bar etc.) */
 .toolbar-primary {
-    background: #111111 !important;
+    background: #1f1f1f !important;
     min-height: 0px !important;
     padding: 0px !important;
     border: none !important;
@@ -263,7 +264,7 @@ toolbarbutton#new-tab-button {
 #addonbar-closebutton {
     /* white "X" icon */
     list-style-image: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" height="14" width="14"><path fill="%23fff" d="M3.81 1.69 1.69 3.81 4.88 7 1.69 10.2 3.81 12.3 7 9.12l3.19 3.19 2.12-2.12-3.18-3.2 3.18-3.19-2.1-2.12-3.2 3.19-3.19-3.19z"/></svg>') !important;
-} 
+}
 /* Custom icons for some extensions */
 /* greasemonkey */
 #addon-bar toolbarbutton#greasemonkey-tbb {
@@ -278,7 +279,7 @@ toolbarbutton#new-tab-button {
     opacity: 1 !important;
 }
 /* grab and drag */
-#grabanddrag-button[gadOn="false"]  {
+#grabanddrag-button[gadOn="false"] {
     /* white crossed out hand */
     list-style-image: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" height="14" width="14"><path fill="%23fff" d="M7 0 3.5 3.5 3.78 6.12 2.34 4.66 0 7 1.94 9.94 10.2 1.62 7 0zm6.09 3.03-9.44 9.44 1 1.53 7 0l2.3-10.5-0.9-0.47z"/></svg>') !important;
     -moz-image-region: inherit !important;
@@ -311,7 +312,7 @@ toolbarbutton#new-tab-button {
 }
 /* stylish */
 #stylish-toolbar-button {
-    /* brush - outline */ 
+    /* brush - outline */
     list-style-image: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" height="14" width="14"><path fill="%23fff" d="M0.906 0.0312c-0.296-0.037-0.587 0.185-0.687 0.344s-0.146 0.31-0.156 0.344c-0.0666 0.202-0.0194 0.28 0 0.375s0.0603 0.186 0.0938 0.281c0.0669 0.191 0.153 0.387 0.25 0.594 0.183 0.39 0.329 0.721 0.812 1.34 0.301 0.387 0.748 0.744 1.22 1.09 0.47 0.35 0.95 0.685 1.25 0.938 0.647 0.544 0.926 0.818 1.28 1.38 0.0379 0.059 0.148 0.65 0.125 1.16-0.03 0.51-0.1 0.97-0.1 0.97l-0.03 0.22 0.15 0.19 2 2 0.344 0.312h0.0312l2.45 2.5 0.26-0.2-2.48-2.5 0.09-0.1 0.16-0.1 0.09-0.1 2.44 2.4 0.3-0.3-2.42-2.4 0.18-0.2 0.16-0.2 2.48 2.5 0.3-0.3-2.47-2.5 0.09-0.06 0.25-0.281 2.44 2.44 0.344-0.312-2.38-2.49 0.28-0.28 0.0625-0.0625 2.47 2.44 0.25-0.25-2.47-2.44 0.156-0.156h0.0312l0.156-0.156 2.44 2.41 0.281-0.25-2.5-2.51 0.1-0.09 0.1-0.03 0.2-0.25 2.5 2.48 0.2-0.29-2.5-2.47 0.1-0.03-0.4-0.35-1.82-1.84v-0.03c-0.02-0.03-0.05-0.05-0.07-0.07-0.01 0-0.02 0.02-0.03 0-0.06-0.06-0.11-0.1-0.16-0.12-0.09-0.04-0.15-0.03-0.21-0.03-0.123-0.01-0.27-0.027-0.5 0-0.236 0.028-0.64 0.0625-1 0.0625s-0.73-0.06-0.72-0.06c-0.24-0.12-0.87-0.65-1.44-1.25-0.24-0.26-0.57-0.74-0.91-1.22-0.33-0.48-0.66-0.96-1.03-1.28-0.57-0.502-0.8-0.579-1.19-0.782-0.48-0.256-0.95-0.374-1.21-0.407zm0.156 1.06c0.196 0.045 0.397 0.0681 0.625 0.188 0.43 0.226 0.472 0.193 1 0.656 0.187 0.164 0.515 0.616 0.844 1.09 0.329 0.478 0.652 1.01 1 1.38 0.62 0.64 1.22 1.18 1.73 1.43 0.38 0.19 0.75 0.16 1.16 0.16s0.84-0.03 1.12-0.06c0.12-0.02 0.14-0.03 0.19-0.03h0.0312l1.5 1.53-0.188 0.188h-0.0312l-0.16 0.25-0.28 0.28-0.22 0.18-0.31 0.32-0.25 0.28-0.31 0.31-0.28 0.25-0.28 0.28-0.29 0.32-0.125 0.156-1.5-1.5c0.03-0.24 0.08-0.43 0.1-0.86 0.03-0.57 0.06-1.19-0.28-1.72-0.4-0.63-0.79-1.06-1.47-1.63-0.36-0.3-0.83-0.63-1.28-0.97-0.45-0.33-0.9-0.69-1.06-0.9-0.45-0.58-0.5-0.76-0.69-1.16-0.08-0.18-0.17-0.33-0.22-0.47z"/></svg>') !important;
 }
 #stylish-toolbar-button[styles-applied~="site"] {
@@ -326,7 +327,7 @@ toolbarbutton#new-tab-button {
     height: 16px !important;
 }
 /* hide dropmarkers for these icons, since clicking on it
-   does the same as clicking on the icon */
+does the same as clicking on the icon */
 #abp-toolbarbutton > dropmarker,
 #stylish-toolbar-button > dropmarker {
     display: none !important;
@@ -365,20 +366,22 @@ toolbarbutton#new-tab-button {
     -moz-image-region: inherit !important;
 }
 /* Scrollbar stuff
-   Notes:
-   xul scrollbar layout:
-     <scrollbar>
-       <xul:scrollbarbutton type="decrement"/>
-       <xul:slider flex="1">
-         <xul:thumb/>
-       </xul:slider>
-       <xul:scrollbarbutton type="increment"/>
-     </scrollbar>
-   scrollbar has an attribute "orient" 
-   which can be "vertical" or "horizontal"
-   scrollbarbutton has an attribute "type"
-   which can be "increment" or "decrement" */
+Notes:
+xul scrollbar layout:
+<scrollbar>
+<xul:scrollbarbutton type="decrement"/>
+<xul:slider flex="1">
+<xul:thumb/>
+</xul:slider>
+<xul:scrollbarbutton type="increment"/>
+</scrollbar>
+scrollbar has an attribute "orient"
+which can be "vertical" or "horizontal"
+scrollbarbutton has an attribute "type"
+which can be "increment" or "decrement" */
 /* scrollbar (outermost container) */
+
+/*
 scrollbar {
     -moz-appearance: none !important;
     box-shadow: none !important;
@@ -386,68 +389,70 @@ scrollbar {
     padding: 0 !important;
 }
 /* vertical scrollbar */
-scrollbar[orient="vertical"] { 
-    width: 6px !important; 
+/*scrollbar[orient="vertical"] {
+    width: 6px !important;
     background-position: bottom !important;
 }
 /* horizontal scrollbar */
-scrollbar[orient="horizontal"] { 
+/*scrollbar[orient="horizontal"] {
     height: 6px !important;
     background-position: right !important;
 }
 /* scrollbar handle */
-scrollbar thumb {
+/*scrollbar thumb {
     -moz-appearance: none !important;
     border: none !important;
-    background: #444444 !important;
+    background: #aaaaaa !important;
     border-radius: 0 !important;
     box-shadow: none !important;
 }
 /* scrollbar up/down buttons (possibly others) */
-scrollbarbutton { 
+/*scrollbarbutton {
     background: #0f0 !important;
     display: none !important;
 }
 /* scrollbar slider (the part on which the handle moves) */
-scrollbar slider {
+/*scrollbar slider {
     background: transparent !important;
 }
 scrollbar,
-/* scrollbars corner (shown when both horizontal 
-   and vertical scrollbars are visible) */
-scrollcorner {
+/* scrollbars corner (shown when both horizontal
+and vertical scrollbars are visible) */
+/*scrollcorner {
     /* 45deg dark-grey bars pattern */
-    background-color: #111 !important;
+    /*background-color: #111 !important;
     background-image: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" height="6" width="6"><path fill="none" stroke="%23444" stroke-width="2" d="M 0 0 6 6"/></svg>') !important;
     background-size: 6px 6px !important;
 }
 
-/* The following seems to hide scrollbars from web pages main bodies 
-   (but keep them for things like textareas). 
-   This also works for image view. 
+
+/* The following seems to hide scrollbars from web pages main bodies
+(but keep them for things like textareas).
+This also works for image view.
 */
 html|html > scrollbar {
     display: none !important;
 }
 
-/*  
-    The following code is a hack working around bug: 
-    https://bugzilla.mozilla.org/show_bug.cgi?id=401213
-    - scrollbars are scaled with the page content when you use zoom.
-    The way this works is that media queries are used to determine 
-    the zoom level (ratio between css pixels and device pixels). 
-    Firefox has 8 enlargement zoom levels and 5 reduction ones, when 
-    using ctrl + +/ctrl + - shortcuts, zoom commands from menu, zoom 
-    toolbar buttons. Ctrl + scroll uses different steps (and more).
-    I found the ratios for the zoom levels with precision of 2 digits 
-    after decimal point. Now for each zoom level, the scrollbars 
-    width and height (and background size) are fixed (lowered
-    for enlargement, increased for reduction), as to get the right
-    amount of device pixels. This works exactly for those exact zoom 
-    levels, but not others. It will however always at least minimize 
-    the amount the scrollbars are resized.
+/*
+The following code is a hack working around bug:
+https://bugzilla.mozilla.org/show_bug.cgi?id=401213
+- scrollbars are scaled with the page content when you use zoom.
+The way this works is that media queries are used to determine
+the zoom level (ratio between css pixels and device pixels).
+Firefox has 8 enlargement zoom levels and 5 reduction ones, when
+using ctrl + +/ctrl + - shortcuts, zoom commands from menu, zoom
+toolbar buttons. Ctrl + scroll uses different steps (and more).
+I found the ratios for the zoom levels with precision of 2 digits
+after decimal point. Now for each zoom level, the scrollbars
+width and height (and background size) are fixed (lowered
+for enlargement, increased for reduction), as to get the right
+amount of device pixels. This works exactly for those exact zoom
+levels, but not others. It will however always at least minimize
+the amount the scrollbars are resized.
 */
 /* Enlargement */
+/*
 @media (min-resolution: 1.09dppx) {
 scrollbar[orient="vertical"] { width: 5.505px !important; }
 scrollbar[orient="horizontal"] { height: 5.505px !important; }
@@ -479,9 +484,9 @@ scrollbar, scrollcorner { background-size: 2.51px 2.51px !important; } }
 @media (min-resolution: 3dppx) {
 scrollbar[orient="vertical"] { width: 2px !important; }
 scrollbar[orient="horizontal"] { height: 2px !important; }
-scrollbar, scrollcorner { background-size: 2px 2px !important; } }
+scrollbar, scrollcorner { background-size: 2px 2px !important; } }*/
 /* Reduction */
-@media (max-resolution: 0.9dppx) {
+/*@media (max-resolution: 0.9dppx) {
 scrollbar[orient="vertical"] { width: 6.667px !important; }
 scrollbar[orient="horizontal"] { height: 6.667px !important; }
 scrollbar, scrollcorner { background-size: 6.667px 6.667px !important; } }
@@ -500,7 +505,7 @@ scrollbar, scrollcorner { background-size: 12px 12px !important; } }
 @media (max-resolution: 0.3dppx) {
 scrollbar[orient="vertical"] { width: 20px !important; }
 scrollbar[orient="horizontal"] { height: 20px !important; }
-scrollbar, scrollcorner { background-size: 20px 20px !important; } }
+scrollbar, scrollcorner { background-size: 20px 20px !important; } }*/
 
 /* hover background color */
 .tabbrowser-tab:hover, /* tab */
@@ -527,13 +532,13 @@ treechildren::-moz-tree-cell-text(CDATA_SECTION_NODE),
 treechildren::-moz-tree-cell-text(TEXT_NODE) {
     color: #4444aa !important;
 }
-/* autocomplete richtext listbox used for autocomplete of url; styled in autocomplete.css */ 
+/* autocomplete richtext listbox used for autocomplete of url; styled in autocomplete.css */
 .autocomplete-richlistbox {
     background: #111111 !important;
 }
 /* autocomplete richtext listbox item */
 .autocomplete-richlistitem {
-    color: #ffffff  !important;
+    color: #ffffff !important;
 }
 /* url autocomplete richtext listbox url of site; styled in browser.css */
 .ac-url-text {
@@ -546,7 +551,7 @@ treechildren::-moz-tree-cell-text(TEXT_NODE) {
     background: #2E5780 !important;
     border: none !important;
     border-radius: 0 !important;
-    padding: 2px !important;    
+    padding: 2px !important;
     color: #ffffff !important;
 }
 /* editbox on findbar */
@@ -556,14 +561,15 @@ treechildren::-moz-tree-cell-text(TEXT_NODE) {
 }
 /*
 button {
-    background: transparent !important;
-    border: 1px solid #444 !important;
-    border-radius: 0 !important;
-    box-shadow: none !important;
-    color: #fff !important;
-    text-shadow: none !important;
+background: transparent !important;
+border: 1px solid #444 !important;
+border-radius: 0 !important;
+box-shadow: none !important;
+color: #fff !important;
+text-shadow: none !important;
 }
 button:hover {
-    background: rgba(255, 255, 255, 0.3) !important;
+background: rgba(255, 255, 255, 0.3) !important;
 }
 */
+
